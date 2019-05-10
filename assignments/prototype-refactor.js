@@ -15,26 +15,26 @@ class GameObject {
         this.name = attrs.name;
 
     }
-    destroy (name) {
+    destroy(name) {
         return `${this.name} was removed from the game.`;
     }
-    takeDamage (name) {
-		return `${this.name} took damage.`;
-	}    
+    takeDamage(name) {
+        return `${this.name} took damage.`;
+    }
 
 }
 
 class Humanoid extends GameObject {
-	constructor(attrs) {
-	   super(attrs);
-	   this.team = attrs.team;
-	   this.weapons = attrs.weapons;
-	   this.language = attrs.language;
-	   	
-	}
-	greet(name,language) {
-   return `${this.name} offers a greeting in ${this.language}`;
- }
+    constructor(attrs) {
+        super(attrs);
+        this.team = attrs.team;
+        this.weapons = attrs.weapons;
+        this.language = attrs.language;
+
+    }
+    greet(name, language) {
+        return `${this.name} offers a greeting in ${this.language}`;
+    }
 }
 
 
