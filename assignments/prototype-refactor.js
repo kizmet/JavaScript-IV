@@ -8,11 +8,11 @@ Prototype Refactor
 
 */
 class GameObject {
-    constructor(createdAt, dimensions, healthPoints, name) {
-        this.createdAt = createdAt;
-        this.dimensions = dimensions;
-        this.healthPoints = healthPoints;
-        this.name = name;
+    constructor(attrs) {
+        this.createdAt = attrs.createdAt;
+        this.dimensions = attrs.dimensions;
+        this.healthPoints = attrs.healthPoints;
+        this.name = attrs.name;
 
     }
     destroy (name) {
@@ -25,11 +25,11 @@ class GameObject {
 }
 
 class Humanoid extends GameObject {
-	constructor({createdAt, dimensions,healthPoints,name,team,weapons,language}) {
-	   super(createdAt,dimensions,healthPoints,name);
-	   this.team = team;
-	   this.weapons = weapons;
-	   this.language = language;
+	constructor(attrs) {
+	   super(attrs);
+	   this.team = attrs.team;
+	   this.weapons = attrs.weapons;
+	   this.language = attrs.language;
 	   	
 	}
 	greet(name,language) {
